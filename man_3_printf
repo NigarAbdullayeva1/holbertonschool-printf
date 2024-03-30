@@ -1,21 +1,21 @@
-.TH PRINTF 3 "30 March 2024" "Version 1.0" "_printf Man Page"
+.TH PRINTF 3 "March 30, 2024" "Version 1.0" "_printf Man Page"
 
 .SH NAME
-_printf \- format and print data
+_printf \- Format and print data
 
 .SH SYNOPSIS
-\fBinclude "main.h"\fR
+#include "main.h"
 .br
-\fBint _printf(const char *format, ...);\fR
+int _printf(const char *format, ...);
 
 .SH DESCRIPTION
-The _printf() function produces output according to a format.
+The \fB_printf()\fR function formats and prints data according to a format string.
 
 .SH RETURN VALUE
-Returns the number of characters printed.
+Returns the number of characters printed. If an error occurs, returns -1.
 
 .SH FORMAT SPECIFIERS
-The _printf function supports the following format specifiers:
+The \fB_printf\fR function supports the following format specifiers:
 
 .TP
 \fB%c\fR
@@ -26,29 +26,23 @@ Prints a single character.
 Prints a string.
 
 .TP
-\fB%d,i\fR
+\fB%d, %i\fR
 Prints an integer value in decimal format.
-
-.TP
-\fB%%\fR
-Prints a '%' character.
 
 .SH EXAMPLE
 
 .nf
-.B #include <stdio.h>
+#include "main.h"
 .br
-.B #include "main.h"
+int main(void)
 .br
-.B int main(void)
+{
 .br
-.B {
+\ \ \ _printf("George likes %co %s.", 't', "dance");
 .br
-.B \ \ \ _printf("George likes %co %s.", "t", "dance");
+\ \ \ return (0);
 .br
-.B \ \ \ return (0);
-.br
-.B }
+}
 .fi
 
 Output: "George likes to dance."
@@ -66,6 +60,4 @@ Report bugs to Authors.
 Free to use.
 
 .SH SEE ALSO
-.B printf(3),
-.B man(7),
-.B putchar(3)
+printf(3), man(7), putchar(3)
