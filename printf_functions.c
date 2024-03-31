@@ -91,5 +91,5 @@ int print_n(va_list n)
 			counter++;
 		}
 	}
-	return (counter);
+	eturn (counter);
 }
