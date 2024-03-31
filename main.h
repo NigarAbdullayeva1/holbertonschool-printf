@@ -24,4 +24,4 @@ int print_str(va_list list);
 int print_char(va_list list);
 int _printf(const char*, ...);
 
-#ndif
+#endif
